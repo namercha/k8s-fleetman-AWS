@@ -10,7 +10,7 @@ route:
 receivers:
 - name: 'slack'
   slack_configs:
-  - channel: '#alerts'
+  - channel: '#k8s'
     icon_emoji: ':bell:'
     send_resolved: true
     text: "<!channel> \nsummary: {{ .CommonAnnotations.message }}\n"
