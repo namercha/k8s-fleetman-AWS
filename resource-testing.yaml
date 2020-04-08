@@ -17,5 +17,8 @@ spec:
         image: richardchesterwood/k8s-fleetman-queue:release2
         resources:
           requests:
-            memory: 500Mi
+            memory: 300Mi
             cpu: 1
+          limits:
+            memory: 500Mi
+            cpu: 2
