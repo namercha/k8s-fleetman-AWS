@@ -63,9 +63,13 @@ spec:
       containers:
       - name: position-tracker
         image: richardchesterwood/k8s-fleetman-position-tracker:resources
+        imagePullPolicy: Always
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
+        envFrom:
+          - configMapRef:
+              name: global-database-config
         resources:
           requests:
             memory: 200Mi
