@@ -4,7 +4,7 @@ metadata:
   name: new-joiner
   namespace: default
 rules:
-  - apiGroups: ["", "apps"]
+  - apiGroups: ["", "apps", "autoscaling", "extensions"]
     resources: ["*"]
     verbs:
       - get
