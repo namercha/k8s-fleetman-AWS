@@ -6,3 +6,6 @@ metadata:
 data:
   DATABASE_URL: "https://dbserver.somewhere.com:3306"
   DATABASE_PASSWORD: "password"
+  database.properties: |
+    DATABASE_URL=https://dbserver.somewhere.com:3306
+    DATABASE_PASSWORD=password
