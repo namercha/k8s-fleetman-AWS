@@ -1,8 +1,7 @@
-kind: Role
+kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: new-joiner
-  namespace: default
 rules:
   - apiGroups: ["", "apps", "autoscaling", "extensions"]
     resources: ["*"]
@@ -12,13 +11,12 @@ rules:
       - watch
 ---
 
-kind: RoleBinding
+kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: put-specific-user-into-new-joiner-role
-  namespace: default
 subjects:
-  - kind: User
+  - kind: ClusterRole
     name: francis-linux-login-name
 roleRef:
   apiGroup: rbac.authorization.k8s.io
