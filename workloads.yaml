@@ -113,14 +113,14 @@ spec:
 
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: webapp
 spec:
   selector:
     matchLabels:
       app: webapp
-  replicas: 3
+  # replicas: 3 - dont need this for Daemonsets
   template: # template for the pods
     metadata:
       labels:
